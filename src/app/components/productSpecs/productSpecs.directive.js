@@ -8,7 +8,8 @@
     function productSpecs() {
         var directive = {
             restriction: 'A',
-            templateUrl: 'app/components/productSpecs/productSpecs.html'
+            templateUrl: 'app/components/productSpecs/productSpecs.html',
+            bindToController: true
         }
         
         return directive;

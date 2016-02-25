@@ -1,23 +1,21 @@
 <!--  Product Reviews List -->
 <ul>
     <h4>Reviews</h4>
-    <li ng-repeat="review in product.reviews">
+    <li ng-repeat="r in vm.product.reviews">
         <blockquote>
-            <strong>{{review.stars}} Stars</strong> {{review.body}}
-            <cite class="clearfix">—{{review.author}}</cite>
+            <strong>{{r.stars}} Stars</strong> {{r.body}}
+            <cite class="clearfix">—{{r.author}}</cite>
         </blockquote>
     </li>
 </ul>
 
 <!--  Review Form -->
-<form name="reviewForm" ng-submit="vm.addReview(product)">
-    <!--  Live Preview -->
+<form name="reviewForm" ng-submit="vm.addReview(vm.product)">
     <blockquote>
         <strong>{{vm.review.stars}} Stars</strong> {{vm.review.body}}
         <cite class="clearfix">—{{vm.review.author}}</cite>
     </blockquote>
 
-    <!--  Review Form -->
     <h4>Submit a Review</h4>
     <fieldset class="form-group">
         <select ng-model="vm.review.stars" class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars">

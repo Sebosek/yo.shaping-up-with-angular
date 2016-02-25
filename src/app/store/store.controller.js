@@ -34,7 +34,13 @@
                         "assets/images/gem-05.gif",
                         "assets/images/gem-09.gif"
                     ],
-                    "reviews": []
+                    "reviews": [
+                        {
+                            stars: 3,
+                            body: "Hello",
+                            author: "john@doe.loc"
+                        }
+                    ]
                 },
                 {
                     "name": "Bloodstone",

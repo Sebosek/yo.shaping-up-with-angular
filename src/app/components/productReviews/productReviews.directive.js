@@ -11,7 +11,10 @@
             templateUrl: 'app/components/productReviews/productReviews.html',
             controller: ProductReviewsController,
             controllerAs: 'vm',
-            bindToController: true
+            scope: {},
+            bindToController: {
+                product: '=in'
+            }
         }
 
         return directive;

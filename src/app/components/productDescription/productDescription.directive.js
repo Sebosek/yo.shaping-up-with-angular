@@ -8,7 +8,8 @@
     function productDescription() {
         var directive = {
             restriction: 'E',
-            templateUrl: 'app/components/productDescription/productDescription.html'
+            templateUrl: 'app/components/productDescription/productDescription.html',
+            bindToController: true
         };
         
         return directive;
