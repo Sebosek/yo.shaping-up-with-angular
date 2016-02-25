@@ -28,7 +28,7 @@
             }
 
             function setTab(a) {
-                this.tab = a || 0;
+                vm.tab = a || 0;
             }
         }
     }
