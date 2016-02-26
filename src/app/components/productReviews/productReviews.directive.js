@@ -13,7 +13,7 @@
             controllerAs: 'vm',
             scope: {},
             bindToController: {
-                product: '=in'
+                product: '=forProduct'
             }
         }
 

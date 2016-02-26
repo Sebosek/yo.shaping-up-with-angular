@@ -1,13 +1,13 @@
 <!--  Product Reviews List -->
-<ul>
-    <h4>Reviews</h4>
-    <li ng-repeat="r in vm.product.reviews">
-        <blockquote>
-            <strong>{{r.stars}} Stars</strong> {{r.body}}
-            <cite class="clearfix">—{{r.author}}</cite>
-        </blockquote>
-    </li>
-</ul>
+<h4>Reviews</h4>
+
+<dl ng-repeat="r in vm.product.reviews" class="dl-horizontal">
+    <dt>{{r.stars}} Stars</dt>
+    <dd>
+        {{r.body}}
+        <cite class="clearfix">—{{r.author}}</cite>
+    </dd>
+</dl>
 
 <!--  Review Form -->
 <form name="reviewForm" ng-submit="vm.addReview(vm.product)">
