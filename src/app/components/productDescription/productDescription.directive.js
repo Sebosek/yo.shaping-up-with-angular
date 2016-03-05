@@ -9,10 +9,23 @@
         var directive = {
             restriction: 'E',
             templateUrl: 'app/components/productDescription/productDescription.html',
-            bindToController: true
+            scope: {},
+            controller: ProductDescriptionController,
+            controllerAs: 'vm',
+            bindToController: {
+                product: '=forProduct',
+                setted: '=isSet'
+            } 
         };
         
         return directive;
+        
+        /** @ngInject */
+        function ProductDescriptionController() {
+            var vm = this;
+            
+            return vm;
+        }
     }
     
 })();

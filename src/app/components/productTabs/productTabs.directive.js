@@ -11,7 +11,10 @@
             templateUrl: 'app/components/productTabs/productTabs.html',
             controller: ProcuctTabsController,
             controllerAs: 'vm',
-            bindToController: true
+            scope: {},
+            bindToController: {
+                product: '=forProduct'
+            }
         };
 
         return directive;

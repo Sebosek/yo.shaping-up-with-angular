@@ -13,7 +13,10 @@
             templateUrl: 'app/components/productGallery/productGallery.html',
             controller: ProductGalleryController,
             controllerAs: 'vm',
-            bindToController: true
+            scope: {},
+            bindToController: {
+                product: '=forProduct'
+            }
         };
         
         return directive;
