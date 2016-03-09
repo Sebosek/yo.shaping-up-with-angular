@@ -7,15 +7,24 @@
 
     <!--  Products Container  -->
     <div class="list-group">
+        
         <!--  Product Container  -->
         <div class="list-group-item" ng-repeat="product in vm.products">
             <h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
 
-            <!-- Image Gallery  -->
             <product-gallery for-product="product"></product-gallery>
-
-            <!-- Product Tabs  -->
-            <product-tabs for-product="product"></product-tabs>
+            
+            <product-tabgroup>
+                <product-tab title="Desctription">
+                    <product-description for-product="product"></product-description>
+                </product-tab>
+                <product-tab title="Specs">
+                    <div product-specs for-product="product"></div>
+                </product-tab>
+                <product-tab title="Reviews">
+                    <product-reviews for-product="product"></product-reviews>
+                </product-tab>
+            </product-tabgroup>
         </div>
     </div>
 </div>
